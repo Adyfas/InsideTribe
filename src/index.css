@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+* {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+::selection {
+  background-color: #b5a6ff;
+}
+
+.bg-ram{
+  background-color:#050307;
+}
+
+.no-scroll::-webkit-scrollbar {
+  display: none;
+}
+.no-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+
+.shine {
+  animation: shine 5s linear infinite;
+}
+
+button {
+  cursor: pointer;
+}
+
+.stroke-draw {
+  stroke-dasharray: 1;       
+  stroke-dashoffset: 1;      
+  animation: draw-line 4s linear forwards; 
+}
+
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;    
+  }
+}
