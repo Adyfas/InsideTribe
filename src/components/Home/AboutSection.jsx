@@ -6,34 +6,53 @@ import {
   images,
   transformStyles,
 } from "../items/ImageItemsAboutSection";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import TextSplit from "../TextSplit";
 
 const AboutSection = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 900,
+      once: true,
+    });
+  }, []);
   return (
     <section className="relative w-full min-h-screen flex flex-col justify-center items-center bg-white">
       <div className="flex flex-col w-full max-w-6xl px-6 py-16 max-md:py-0">
         <div className="flex-1 flex items-start">
           <h1
+            data-oas-delay={700}
+            data-aos="fade-in"
             className="text-[2.5rem] md:text-[6rem] font-light leading-[1.05] text-black tracking-tight md:text-left text-left"
             style={{ fontFamily: "Inter, Arial, sans-serif" }}
           >
-            Inside Tribe?
+            <TextSplit text={"Inside Tribe?"} duration={0.6} />
           </h1>
         </div>
         <div className="justify-start items-start max-md:flex-col overflow-x-hidden">
           <div className="justify-between items-center flex gap-10 max-md:flex-col">
             <div className="items-start md:w-1/2 w-full">
-              <p className="text-lg md:text-xl text-black mb-8 max-w-lg max-md:mt-[16px] lg:ml-2 ml-0.5">
+              <p
+                data-aos="fade-up"
+                className="text-lg md:text-xl text-black mb-8 max-w-lg max-md:mt-[16px] lg:ml-2 ml-0.5"
+              >
                 Inside Tribe has a commitment that aims to reveal hidden
                 cultures in Indonesia. We believe that behind every hidden
-                tradition, there are stories, values, and wisdom that deserve
-                to be known by the public.
+                tradition, there are stories, values, and wisdom that deserve to
+                be known by the public.
               </p>
-              <button className="bg-black text-white px-8 py-3 rounded-2xl text-base font-normal shadow-md hover:bg-neutral-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-black/30 mb-8">
+              <button
+                data-aos="fade-up"
+                className="bg-black text-white px-8 py-3 rounded-2xl text-base font-normal shadow-md hover:bg-neutral-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-black/30 mb-8"
+              >
                 Explore More
               </button>
             </div>
-            <div className="hidden md:flex w-1/2 justify-center items-center">
+            <div className="hidden md:flex w-1/2 justify-center items-center overflow-y-hidden">
               <Stack
+                aos={'fade-up'}
                 randomRotation={false}
                 sensitivity={180}
                 sendToBackOnClick={false}
@@ -41,7 +60,7 @@ const AboutSection = () => {
                 cardsData={images}
               />
             </div>
-            <div className="md:hidden flex justify-center mt-8 w-full">
+            <div className="md:hidden flex justify-center mt-8 w-full" data-aos="fade-up">
               <BounceCards
                 className="custom-bounceCards"
                 images={images2}

@@ -12,7 +12,7 @@ export const SocialMediaFooter = () => {
           {SocialMedia.map((item, index) => (
             <li key={index}>
               <Link
-                className="flex items-center gap-1 text-[12px] hover:underline group hover:text-[#b5a6ff]"
+                className="flex items-center gap-4 my-2 text-[16px] hover:underline group hover:text-[#b5a6ff] "
                 to={item.path}
               >
                 {item.icon} {item.name}

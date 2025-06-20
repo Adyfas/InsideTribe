@@ -17,7 +17,7 @@ export const Footer = () => {
     });
   }, []);
   return (
-    <footer className="bg-[#050307] text-[#F7EDDE] rounded-t-4xl w-full">
+    <footer className="bg-[#050307] text-[#F7EDDE] rounded-t-4xl w-full dark-section">
       <div className="w-full px-4 sm:px-6 lg:px-8 py-12">
         <HeaderFooter />
         <ContactFooter />

@@ -23,7 +23,7 @@ export const ItemsNavbar = ({ items, location }) => {
               >
                 {item.name}
                 <span
-                  className={`absolute -bottom-1.5 left-1/2 transform -translate-x-1/2 w-1.5 h-1.5 bg-black rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 ${
+                  className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-black rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 ${
                     location.pathname === item.path
                       ? "opacity-100"
                       : "opacity-0"

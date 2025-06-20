@@ -49,7 +49,7 @@ const HeroSection = ({ Video }) => {
   }, []);
   return (
     <>
-      <section className="flex justify-center items-center h-screen my-5">
+      <section className="flex justify-center items-center h-screen my-5 dark-section">
         <div className="flex items-center flex-col gap-5 absolute z-10">
           {/* <h1 className="text-black font-bold text-center text-5xl ">
             <TextSplit
@@ -67,16 +67,15 @@ const HeroSection = ({ Video }) => {
           </h1>
         </div>
         <video
-          id="hero"
           ref={wrapper}
-          className="relative top-[24px] left-0 w-[97%] h-[85%] object-cover -z-10 rounded-4xl my-5 opacity-0"
+          className="relative top-[24px] left-0 w-[97%] h-[85%] object-cover -z-10 rounded-4xl my-5 opacity-0 brightness-100"
           src={Video}
           autoPlay
           loop
           muted
           playsInline
         />
-          {/* <div className="absolute bg-black/50 backdrop-blur-3xl text-white rounded-b-4xl">
+        {/* <div className="absolute bg-black/50 backdrop-blur-3xl text-white rounded-b-4xl">
             <div className="flex items-center flex-col">
               <h1 className="text-white text-xl text-start">
                 {" "}

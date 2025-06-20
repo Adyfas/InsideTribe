@@ -11,7 +11,7 @@ const ExploreFooter = () => {
           <li key={index}>
             <Link
               to={item.path}
-              className="text-sm text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
+              className="text-sm text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group text-[16px]"
             >
               {item.name}
               <svg

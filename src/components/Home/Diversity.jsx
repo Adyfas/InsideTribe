@@ -26,11 +26,13 @@ const Diversity = () => {
       <div className="flex flex-wrap justify-center max-md:flex-col">
         {stats.map((item, idx) => (
           <div
+            data-aos="fade-up"
+            data-aos-delay={300 * idx}
             key={idx}
             className="bg-[#F7EDDE] rounded-3xl shadow-md flex flex-col justify-center items-center p-8 w-[260px] h-[220px] max-w-[90vw] max-md:w-4xl max-md:my-4 transition-transform duration-500 hover:shadow-md relative group animate-fadeIn cursor-pointer m-4 max-md:m-0"
           >
             <span className="text-5xl md:text-6xl font-extrabold text-[#232025] mb-2 transition-colors duration-300 group-hover:text-[#B6895B]">
-              <Counter target={item.value}/>
+              <Counter target={item.value} />
               {/* {item.value} */}
             </span>
             <span className="text-lg md:text-xl font-medium text-[#232025] text-center mt-2">

@@ -1,15 +1,17 @@
 const Card = ({ id, img, desc, location, onRead = () => {} }) => {
   return (
     <div
+      data-ao="fade-up"
+      data-aos-delay={200 * id}
       key={id}
       className="relative w-[340px] h-[400px] rounded-3xl overflow-hidden shadow-lg bg-black/80 max-md:w-[360px] max-md:h-[400px] group cursor-pointer"
     >
       <img
         src={img}
         alt={desc}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover group-hover:brightness-75"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-all duration-700" />
       <div className="absolute top-4 left-4 right-4 flex justify-between items-start z-10">
         <div className="flex gap-2 ">
           <span
@@ -30,15 +32,25 @@ const Card = ({ id, img, desc, location, onRead = () => {} }) => {
             {location}
           </span>
         </div>
-        <button
-          onClick={() => onRead()}
-          className="flex items-center gap-1 text-white text-sm font-medium hover:underline opacity-0 group-hover:opacity-100 transition-all duration-500"
-        >
-          Read <span aria-hidden>→</span>
-        </button>
       </div>
       <div className="absolute bottom-6 left-4 right-4 z-10 transform translate-y-100 group-hover:translate-y-0 transition-all duration-700">
-        <h3 className="text-white text-xl font-normal leading-snug">{desc}</h3>
+        <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 shadow-lg">
+          <h3 className="text-white text-xl font-normal leading-snug text-start mb-3">
+            {desc}
+          </h3>
+          <div className="border-t border-white/20 mb-2" />
+          <button
+            onClick={() => onRead()}
+            className="relative flex items-center gap-2 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-500 group px-4 py-2 rounded-lg overflow-hidden focus:outline-none"
+          >
+            <span className="transition-transform duration-700 group-hover:-translate-x-2 relative ">
+              Read
+            </span>
+            <span aria-hidden className="transition-none">
+              →
+            </span>
+          </button>
+        </div>
       </div>
     </div>
   );

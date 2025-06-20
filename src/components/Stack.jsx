@@ -1,7 +1,7 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useState } from "react";
 
-function CardRotate({ children, onSendToBack, sensitivity }) {
+function CardRotate({ children, onSendToBack, sensitivity}) {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const rotateX = useTransform(y, [-100, 100], [60, -60]);
@@ -41,7 +41,8 @@ export default function Stack({
   cardsData = [],
   animationConfig = { stiffness: 260, damping: 20 },
   sendToBackOnClick = false,
-  context
+  context,
+  aos 
 }) {
   const [cards, setCards] = useState(
     cardsData.length
@@ -66,6 +67,7 @@ export default function Stack({
 
   return (
     <div
+    data-aos={aos}
     ref={context}
       className="relative"
       style={{
