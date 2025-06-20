@@ -7,7 +7,7 @@ const LogoNavbar = () => {
       {/* logo */}
       <div className="items-center" lang="zxx" translate="no">
         <h1 className="text-2xl font-semibold" lang="zxx" translate="no">
-          <TextSplit  text={"Inside Tribe"} duration={0.4} delay={0.3} />
+          <TextSplit  text={"Inside Tribe"} duration={0.2} />
         </h1>
       </div>
     </>

@@ -12,10 +12,10 @@ const ItemsButtonNavbar = ({ itemsButton }) => {
               key={index}
               lang="zxx"
               translate="no"
-              className="border border-black/50 rounded-3xl bg-white/10 backdrop-blur-xl px-5 py-2 font-medium transition-all duration-300 hover:scale-99 text-[12px] "
+              className="border border-black/50 rounded-3xl bg-white/50 backdrop-blur-xl px-5 py-2 font-medium transition-all duration-300 hover:scale-99 text-[12px] "
               data-aos="fade-up"
               data-aos-duration={900}
-              data-aos-delay={1000}
+              data-aos-delay={700}
             >
               <Link key={index} to={items.path} lang="zxx" translate="no">
                 {items.name}

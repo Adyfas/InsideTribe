@@ -4,12 +4,16 @@ import TextSplit from "../TextSplit";
 import { useRef } from "react";
 import { useLayoutEffect } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 const HeroSection = ({ Video }) => {
   const wrapper = useRef();
+  const sectionRef = useRef();
 
   useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
     const el = wrapper.current;
+    const section = sectionRef.current;
     setTimeout(() => {
       gsap.fromTo(
         el,
@@ -28,63 +32,39 @@ const HeroSection = ({ Video }) => {
           },
         }
       );
-    }, 3000);
+    }, 900);
+    gsap.to(el, {
+      scrollTrigger: {
+        trigger: section,
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+        pin: true,
+      },
+      scale: 1,
+      y: -100,
+      ease: "none",
+      overwrite: "auto",
+    });
   }, []);
   return (
     <>
       <section className="flex justify-center items-center h-screen my-5">
         <div className="flex items-center flex-col gap-5 absolute z-10">
-          <h1 className="text-white font-bold text-center text-5xl max-md:hidden">
+          {/* <h1 className="text-black font-bold text-center text-5xl ">
             <TextSplit
               text={"Beyond the Surface, Deep Into Tradition"}
               duration={0.6}
               delay={0.3}
             />
+          </h1> */}
+          <h1 className="text-white font-bold text-center text-5xl max-md:hidden">
+            <TextSplit
+              text={"Beyond the Surface, Deep Into Tradition"}
+              duration={0.6}
+              delay={0.9}
+            />
           </h1>
-
-          {/* <Link
-            to={"/"}
-            className="text-white font-bold text-center bg-gray-900/50 backdrop-blur-3xl rounded-2xl p-4 text-2xl max-md:hidden flex items-center gap-4"
-          >
-            Explore Now{" "}
-            <svg
-              className="transition-all duration-500"
-              xmlns="http://www.w3.org/2000/svg"
-              width={24}
-              height={24}
-              viewBox="0 0 24 24"
-            >
-              <g
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-              >
-                <path strokeDasharray={20} strokeDashoffset={20} d="M3 12h17.5">
-                  <animate
-                    fill="freeze"
-                    attributeName="stroke-dashoffset"
-                    dur="0.2s"
-                    values="20;0"
-                  ></animate>
-                </path>
-                <path
-                  strokeDasharray={12}
-                  strokeDashoffset={12}
-                  d="M21 12l-7 7M21 12l-7 -7"
-                >
-                  <animate
-                    fill="freeze"
-                    attributeName="stroke-dashoffset"
-                    begin="0.2s"
-                    dur="0.2s"
-                    values="12;0"
-                  ></animate>
-                </path>
-              </g>
-            </svg>
-          </Link> */}
         </div>
         <video
           id="hero"
@@ -96,9 +76,24 @@ const HeroSection = ({ Video }) => {
           muted
           playsInline
         />
-        {/* <Link className="text-xl text-white absolute z-10 bottom-5 left-10 max-md:left-5 flex items-center">
-          Explore Now
-        </Link> */}
+          {/* <div className="absolute bg-black/50 backdrop-blur-3xl text-white rounded-b-4xl">
+            <div className="flex items-center flex-col">
+              <h1 className="text-white text-xl text-start">
+                {" "}
+                <TextSplit
+                  text={"Beyond the Surface, Deep Into Tradition"}
+                  duration={0.6}
+                  delay={0.3}
+                />
+              </h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+                saepe alias illo quo sed atque vel ipsam reprehenderit cumque
+                libero sit error quas fugit, facilis eaque voluptatum veritatis
+                assumenda id.
+              </p>
+            </div>
+          </div> */}
       </section>
     </>
   );

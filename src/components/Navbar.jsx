@@ -13,35 +13,35 @@ import OverlayMenuNavbarMobile from "./Navbar/OverlayMenuNavbarMobile";
 export const Navbar = ({ items, itemsButton }) => {
   const location = useLocation();
   const [overlayMenu, setOverlayMenu] = useState(false);
-  const [onHero, setOnHero] = useState(true);
+  // const [onHero, setOnHero] = useState(true);
   useEffect(() => {
     AOS.init({
       duration: 500,
       once: true,
     });
-    const hero = document.querySelector("#hero");
-    if (!hero) return;
+    // const hero = document.querySelector("#hero");
+    // if (!hero) return;
 
-    const observer = new IntersectionObserver(
-      ([entry]) => setOnHero(entry.isIntersecting),
-      { root: null, threshold: 0 }
-    );
+    // const observer = new IntersectionObserver(
+    //   ([entry]) => setOnHero(entry.isIntersecting),
+    //   { root: null, threshold: 0 }
+    // );
 
-    observer.observe(hero);
-    return () => observer.disconnect();
+    // observer.observe(hero);
+    // return () => observer.disconnect();
   }, []);
   
 
-  const Color = onHero ? "black" : "white";
-  console.log(Color);
+  // const Color = onHero ? "black" : "white";
+  // console.log(Color);
 
   return (
     <nav
-      className={`fixed w-full top-0 flex justify-between items-center z-50 bg-transparent p-6 transition-all duration-500 text-${Color}`}
+      className={`fixed w-full top-0 flex justify-between items-center z-50 bg-transparent p-6 transition-all duration-500 text-black`}
     >
       <LogoNavbar />
 
-      <ItemsNavbar items={items} location={location} Color={Color} />
+      <ItemsNavbar items={items} location={location} />
 
       <ItemsButtonNavbar itemsButton={itemsButton} />
 
