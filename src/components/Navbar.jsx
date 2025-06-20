@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
-P
+import AOS from "aos";
+import "aos/dist/aos.css";
 import LogoNavbar from "./Navbar/LogoNavbar";
 import { ItemsNavbar } from "./Navbar/ItemsNavbar";
 import ItemsButtonNavbar from "./Navbar/ItemsButtonNavbar";
