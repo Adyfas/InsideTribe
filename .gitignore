@@ -18,7 +18,11 @@ dist-ssr
 .idea
 .DS_Store
 *.suo
+
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+video/*
+!video/Video(1).mp4
