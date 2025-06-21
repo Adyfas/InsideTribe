@@ -9,7 +9,7 @@ const Card = ({ id, img, desc, location, onRead = () => {} }) => {
       <img
         src={img}
         alt={desc}
-        className="absolute inset-0 w-full h-full object-cover group-hover:brightness-75"
+        className=" inset-0 w-full h-full object-cover group-hover:brightness-75"
       />
       <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-all duration-700" />
       <div className="absolute top-4 left-4 right-4 flex justify-between items-start z-10">

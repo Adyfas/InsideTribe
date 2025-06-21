@@ -5,6 +5,7 @@ import { useRef } from "react";
 import { useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { Suspense } from "react";
 
 const HeroSection = ({ Video }) => {
   const wrapper = useRef();
@@ -51,13 +52,6 @@ const HeroSection = ({ Video }) => {
     <>
       <section className="flex justify-center items-center h-screen my-5 dark-section">
         <div className="flex items-center flex-col gap-5 absolute z-10">
-          {/* <h1 className="text-black font-bold text-center text-5xl ">
-            <TextSplit
-              text={"Beyond the Surface, Deep Into Tradition"}
-              duration={0.6}
-              delay={0.3}
-            />
-          </h1> */}
           <h1 className="text-white font-bold text-center text-5xl max-md:hidden">
             <TextSplit
               text={"Beyond the Surface, Deep Into Tradition"}
@@ -66,15 +60,18 @@ const HeroSection = ({ Video }) => {
             />
           </h1>
         </div>
-        <video
-          ref={wrapper}
-          className="relative top-[24px] left-0 w-[97%] h-[85%] object-cover -z-10 rounded-4xl my-5 opacity-0 brightness-100"
-          src={Video}
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
+        <Suspense>
+          <video
+            ref={wrapper}
+            className="relative top-[24px] left-0 w-[97%] h-[85%] object-cover -z-10 rounded-4xl my-5 opacity-0 brightness-100"
+            src={Video}
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+
+        </Suspense>
         {/* <div className="absolute bg-black/50 backdrop-blur-3xl text-white rounded-b-4xl">
             <div className="flex items-center flex-col">
               <h1 className="text-white text-xl text-start">

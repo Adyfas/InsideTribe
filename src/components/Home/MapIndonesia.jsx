@@ -5,7 +5,9 @@ import indoProv from "../../assets/mapindonesia.json";
 import { tribes } from "../items/Tribes";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useRef, useLayoutEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 const provinceStyle = {
   fillColor: "#679926",
@@ -16,6 +18,59 @@ const provinceStyle = {
 };
 
 export default function MapSection() {
+  const mapRef = useRef();
+  const titleRef = useRef();
+
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Animasi untuk title
+    gsap.fromTo(
+      titleRef.current,
+      { 
+        y: 50, 
+        opacity: 0 
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: titleRef.current,
+          start: "top 80%",
+          end: "bottom 20%",
+          scrub: false,
+          once: true,
+        },
+      }
+    );
+
+    // Animasi untuk map container
+    gsap.fromTo(
+      mapRef.current,
+      { 
+        scale: 0.8, 
+        opacity: 0,
+        y: 50
+      },
+      {
+        scale: 1,
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: mapRef.current,
+          start: "top 80%",
+          end: "bottom 20%",
+          scrub: false,
+          once: true,
+        },
+      }
+    );
+  }, []);
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -51,42 +106,47 @@ export default function MapSection() {
 
   return (
     <section className="py-12 bg-white z-10 relative h-screen">
-      <h2 className="text-center text-3xl font-bold mb-6" data-aos="fade-up">
+      <h2 
+        ref={titleRef}
+        className="text-center text-3xl font-bold mb-6"
+      >
         Mapping Indonesia's Hidden Cultures
       </h2>
 
-      <MapContainer
-        center={[-2, 117]}
-        zoom={4}
-        scrollWheelZoom={false}
-        className="h-[500px] w-full max-w-5xl mx-auto rounded-2xl shadow"
-      >
-        <TileLayer
-          attribution="&copy; OpenStreetMap contributors"
-          url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-        />
+      <div ref={mapRef}>
+        <MapContainer
+          center={[-2, 117]}
+          zoom={4}
+          scrollWheelZoom={false}
+          className="h-[500px] w-full max-w-5xl mx-auto rounded-2xl shadow"
+        >
+          <TileLayer
+            attribution="&copy; OpenStreetMap contributors"
+            url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+          />
 
-        <div data-aos="zoom-in">
           <GeoJSON
             data={indoProv}
             style={provinceStyle}
             onEachFeature={onEachProv}
             ref={(layer) => (indoGeoLayer = layer)}
           />
-        </div>
-        {tribes.map((t) => (
-          <Marker key={t.name} position={t.position} icon={tribeIcon()}>
-            <Popup>
-              <b>{t.name}</b>
-              <br />
-              {t.description}
-            </Popup>
-          </Marker>
-        ))}
-      </MapContainer>
+          
+          {tribes.map((t) => (
+            <Marker key={t.name} position={t.position} icon={tribeIcon()}>
+              <Popup>
+                <b>{t.name}</b>
+                <br />
+                {t.description}
+              </Popup>
+            </Marker>
+          ))}
+        </MapContainer>
+      </div>
     </section>
   );
 }
+
 function tribeIcon() {
   return L.icon({
     iconUrl:
