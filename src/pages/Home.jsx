@@ -10,10 +10,10 @@ import videoBg from "../assets/video/Video(1).mp4";
 import { Link } from "react-router-dom";
 import TextSplit from "../components/TextSplit";
 import HeroSection from "../components/Home/HeroSection";
-import AboutSection from "../components/Home/AboutSection";
 import WhyItMatters from "../components/Home/WhyItMatters";
 import Diversity from "../components/Home/Diversity";
 import MapIndonesia from "../components/Home/MapIndonesia";
+import WordSection from "../components/Home/WordSection";
 
 const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,7 +27,7 @@ const Home = () => {
 
           <HeroSection Video={videoBg} />
 
-          <AboutSection />
+          <WordSection />
 
           <Diversity />
 

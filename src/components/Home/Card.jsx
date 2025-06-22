@@ -1,17 +1,48 @@
-const Card = ({ id, img, desc, location, onRead = () => {} }) => {
+import React, { useRef, useLayoutEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+const Card = ({ id, img, desc, location, onRead = () => {}, index = 0 }) => {
+  const cardRef = useRef();
+
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.fromTo(
+      cardRef.current,
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        delay: index * 0.2, // Delay berdasarkan index
+        scrollTrigger: {
+          trigger: cardRef.current,
+          start: "top 85%",
+          end: "bottom 15%",
+          scrub: false,
+          once: true,
+        },
+      }
+    );
+  }, [index]);
+
   return (
     <div
-      data-ao="fade-up"
-      data-aos-delay={200 * id}
+      ref={cardRef}
       key={id}
-      className="relative w-[340px] h-[400px] rounded-3xl overflow-hidden shadow-lg bg-black/80 max-md:w-[360px] max-md:h-[400px] group cursor-pointer"
+      className="no-scroll relative w-[340px] h-[400px] rounded-3xl overflow-hidden shadow-lg bg-black/80 max-md:w-[360px] max-md:h-[400px] group cursor-pointer"
     >
       <img
         src={img}
         alt={desc}
         className=" inset-0 w-full h-full object-cover group-hover:brightness-75"
       />
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-all duration-700" />
+      {/* <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-all duration-700" /> */}
       <div className="absolute top-4 left-4 right-4 flex justify-between items-start z-10">
         <div className="flex gap-2 ">
           <span

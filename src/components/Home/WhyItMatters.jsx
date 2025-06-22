@@ -8,10 +8,10 @@ import { useEffect } from "react";
 
 const WhyItMatters = () => {
   useEffect(() => {
-  AOS.init({ duration: 800, once: true });
+    AOS.init({ duration: 800, once: true });
   }, []);
   return (
-    <section className="relative w-full min-h-screen flex flex-col justify-center items-center bg-white">
+    <section className="no-scroll relative w-full min-h-screen flex flex-col justify-center items-center bg-white overflow-hidden">
       <div className="flex flex-col w-full max-w-6xl px-6 py-16 max-md:py-0">
         <div className="flex-1 flex items-start">
           <h1
@@ -21,7 +21,7 @@ const WhyItMatters = () => {
             <TextSplit text={"Tribes"} duration={0.6} delay={1} />
           </h1>
         </div>
-        <div className="justify-start items-start max-md:flex-col overflow-x-hidden">
+        <div className="justify-start items-start max-md:flex-col overflow-hidden no-scroll">
           <div className="justify-between items-center flex gap-10 max-md:flex-col">
             <div className="items-start">
               <p

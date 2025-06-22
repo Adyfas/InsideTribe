@@ -11,7 +11,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import TextSplit from "../TextSplit";
 
-const AboutSection = () => {
+const WordSection = () => {
   useEffect(() => {
     AOS.init({
       duration: 900,
@@ -80,4 +80,4 @@ const AboutSection = () => {
   );
 };
 
-export default AboutSection;
+export default WordSection;
