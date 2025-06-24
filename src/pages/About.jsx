@@ -1,14 +1,13 @@
 import React from "react";
 import { Navbar } from "../components/Navbar";
-import {
-  NavbarItems,
-  NavbarButtonItems,
-} from "../components/items/NavbarItems";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import SectionAbout from "../components/About/SectionAbout";
 import MarqueeAbout from "../components/About/MarqueeAbout";
+import { Footer } from "../components/Footer";
+import FeaturesSection from "../components/About/FeaturesSection";
+import { GridImage } from "../components/About/GridImage";
 
 export const About = () => {
   useEffect(() => {
@@ -25,9 +24,12 @@ export const About = () => {
 
   return (
     <div className="bg-white text-black my-[48px]">
-      <Navbar items={NavbarItems} itemsButton={NavbarButtonItems} />
+      <Navbar />
       <SectionAbout headingText={headingText} paragraphText={paragraphText} />
       <MarqueeAbout />
+      <FeaturesSection />
+      <GridImage />
+      <Footer />
     </div>
   );
 };

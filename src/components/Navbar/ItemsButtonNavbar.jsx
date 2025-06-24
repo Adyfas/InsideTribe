@@ -1,11 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ItemsButtonNavbar = ({ itemsButton }) => {
+const ItemsButtonNavbar = ({ itemsButton, isOnDark }) => {
   return (
     <>
       {/* button */}
-      <div className="items-center hidden lg:block">
+      <div className={`${
+          isOnDark ? "text-white" : "text-black"
+        } items-center hidden lg:block`}>
         <div className="flex items-center justify-center gap-2">
           {itemsButton.map((items, index) => (
             <button

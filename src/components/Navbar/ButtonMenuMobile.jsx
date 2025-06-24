@@ -1,10 +1,14 @@
 import React from "react";
 
-const ButtonMenuMobile = ({ setOverlayMenu = () => {} }) => {
+const ButtonMenuMobile = ({ setOverlayMenu = () => {}, isOnDark }) => {
   return (
     <>
       {/* button mobile */}
-      <div className="items-center lg:hidden block transition-all duration-700">
+      <div
+        className={`${
+          isOnDark ? "text-white" : "text-black"
+        } items-center lg:hidden block transition-all duration-700`}
+      >
         <button
           onClick={() => setOverlayMenu(true)}
           data-aos="fade-up"

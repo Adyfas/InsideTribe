@@ -15,10 +15,10 @@ export const NavbarItems = [
     name: "Explore",
     path: "/explore",
   },
-  {
-    name: "Map",
-    path: "/map",
-  },
+  // {
+  //   name: "Map",
+  //   path: "/map",
+  // },
 ];
 
 export const NavbarButtonItems = [
@@ -26,8 +26,8 @@ export const NavbarButtonItems = [
     name: "Contact",
     path: "/contact",
   },
-  {
-    name: "Blog",
-    path: "/blog",
-  },
+  // {
+  //   name: "Blog",
+  //   path: "/blog",
+  // },
 ];

@@ -7,8 +7,12 @@ import { ItemsNavbar } from "./Navbar/ItemsNavbar";
 import ItemsButtonNavbar from "./Navbar/ItemsButtonNavbar";
 import ButtonMenuMobile from "./Navbar/ButtonMenuMobile";
 import OverlayMenuNavbarMobile from "./Navbar/OverlayMenuNavbarMobile";
+import {
+  NavbarItems,
+  NavbarButtonItems,
+} from "../components/items/NavbarItems";
 
-export const Navbar = ({ items, itemsButton }) => {
+export const Navbar = () => {
   const location = useLocation();
   const [overlayMenu, setOverlayMenu] = useState(false);
   const [isOnDark, setIsOnDark] = useState(false);
@@ -26,15 +30,12 @@ export const Navbar = ({ items, itemsButton }) => {
     const detector = detectorRef.current;
     if (!detector) return;
 
-    // Fungsi untuk mendeteksi warna background di belakang navbar
     const checkBackgroundColor = () => {
-      // Dapatkan semua elemen yang berada di bawah navbar
       const elementsBelow = document.elementsFromPoint(
         window.innerWidth / 2,
         navbarRef.current.getBoundingClientRect().bottom + 5
       );
 
-      // Cari elemen pertama yang bukan navbar atau turunannya
       const backgroundElement = elementsBelow.find(
         (el) =>
           !navbarRef.current.contains(el) && !el.classList.contains("aos-init")
@@ -42,10 +43,8 @@ export const Navbar = ({ items, itemsButton }) => {
 
       if (!backgroundElement) return;
 
-      // Dapatkan warna background elemen
       const bgColor = getComputedStyle(backgroundElement).backgroundColor;
 
-      // Jika warna background adalah transparan, coba cari elemen induk
       if (bgColor === "rgba(0, 0, 0, 0)" || bgColor === "transparent") {
         let parent = backgroundElement.parentElement;
         while (parent) {
@@ -63,13 +62,10 @@ export const Navbar = ({ items, itemsButton }) => {
         return;
       }
 
-      // Tentukan apakah warna tergolong gelap
       setIsOnDark(isColorDark(bgColor));
     };
 
-    // Fungsi untuk menentukan apakah warna tergolong gelap
     const isColorDark = (color) => {
-      // Konversi warna ke format RGB
       const rgb = color.match(/\d+/g);
       if (!rgb || rgb.length < 3) return false;
 
@@ -77,14 +73,11 @@ export const Navbar = ({ items, itemsButton }) => {
       const g = parseInt(rgb[1]);
       const b = parseInt(rgb[2]);
 
-      // Hitung kecerahan (brightness)
       const brightness = (r * 299 + g * 587 + b * 114) / 1000;
 
-      // Jika kecerahan kurang dari 128, dianggap gelap
       return brightness < 128;
     };
 
-    // Setup Intersection Observer untuk mendeteksi perubahan
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -96,13 +89,10 @@ export const Navbar = ({ items, itemsButton }) => {
       { threshold: 0.1 }
     );
 
-    // Observasi elemen detector
     observer.observe(detector);
 
-    // Setup event listener untuk scroll
     window.addEventListener("scroll", checkBackgroundColor);
 
-    // Panggil sekali di awal
     checkBackgroundColor();
 
     return () => {
@@ -115,28 +105,32 @@ export const Navbar = ({ items, itemsButton }) => {
     <>
       <nav
         ref={navbarRef}
-        className={`fixed w-full top-0 flex justify-between items-center z-50 bg-transparent p-6 transition-all duration-500 ${
-          isOnDark ? "text-white" : "text-black"
-        }`}
+        className={`fixed w-full top-0 flex justify-between items-center z-50 bg-transparent p-6 transition-all duration-500`}
       >
-        <LogoNavbar />
-        <ItemsNavbar items={items} location={location} />
-        <ItemsButtonNavbar itemsButton={itemsButton} />
+        <LogoNavbar isOnDark={isOnDark} />
+        <ItemsNavbar
+          items={NavbarItems}
+          location={location}
+          isOnDark={isOnDark}
+        />
+        <ItemsButtonNavbar
+          itemsButton={NavbarButtonItems}
+          isOnDark={isOnDark}
+        />
         <ButtonMenuMobile setOverlayMenu={setOverlayMenu} />
         <OverlayMenuNavbarMobile
-          items={items}
-          itemsButton={itemsButton}
+          items={NavbarItems}
+          itemsButton={NavbarButtonItems}
           overlayMenu={overlayMenu}
           setOverlayMenu={setOverlayMenu}
         />
       </nav>
 
-      {/* Elemen pendeteksi untuk menentukan warna background di belakang navbar */}
       <div
         ref={detectorRef}
         style={{
           position: "fixed",
-          top: "80px", // Sesuaikan dengan tinggi navbar
+          top: "80px",
           left: 0,
           width: "100%",
           height: "1px",

@@ -1,14 +1,8 @@
 import React, { useState } from "react";
 import Loading from "../components/Loading";
 import { Navbar } from "../components/Navbar";
-import {
-  NavbarItems,
-  NavbarButtonItems,
-} from "../components/items/NavbarItems";
 import { Footer } from "../components/Footer";
 import videoBg from "../assets/video/Video(1).mp4";
-import { Link } from "react-router-dom";
-import TextSplit from "../components/TextSplit";
 import HeroSection from "../components/Home/HeroSection";
 import WhyItMatters from "../components/Home/WhyItMatters";
 import Diversity from "../components/Home/Diversity";
@@ -23,7 +17,7 @@ const Home = () => {
       {isLoading && <Loading onComplete={() => setIsLoading(false)} />}
       {!isLoading && (
         <div>
-          <Navbar items={NavbarItems} itemsButton={NavbarButtonItems} />
+          <Navbar />
 
           <HeroSection Video={videoBg} />
 

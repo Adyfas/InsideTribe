@@ -16,7 +16,7 @@ export const tribes = [
       position: [-1.6815, 113.3824], // Central Kalimantan
       description:
         "Death ceremony involving the transfer of bones to a sandung. Involves traditional music, dance, and a long procession. Visual: traditional cemetery, fire procession, community in traditional attire."
-    },
+  },
     {
       name: "Toraja Tribe",
       position: [-3.0258, 119.8682], // South Sulawesi

@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const ItemsNavbar = ({ items, location }) => {
+export const ItemsNavbar = ({ items, location, isOnDark }) => {
   return (
     <>
       {/* items */}
-      <div className="items-center transform hidden lg:block">
+      <div
+        className={`${
+          isOnDark ? "text-white" : "text-black"
+        } items-center transform hidden lg:block`}
+      >
         <ul className="flex items-center gap-x-15 bg-white/50 backdrop-blur-xl rounded-2xl transition-all duration-700 p-1 px-4">
           {items?.map((item, idx) => (
             <li
@@ -23,7 +27,9 @@ export const ItemsNavbar = ({ items, location }) => {
               >
                 {item.name}
                 <span
-                  className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-black rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 ${
+                  className={`absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 ${
+                    isOnDark ? "bg-white" : "bg-black"
+                  } rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-700 ${
                     location.pathname === item.path
                       ? "opacity-100"
                       : "opacity-0"

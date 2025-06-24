@@ -9,8 +9,8 @@
   background-color: #b5a6ff;
 }
 
-.bg-ram{
-  background-color:#050307;
+.bg-ram {
+  background-color: #050307;
 }
 
 .no-scroll::-webkit-scrollbar {
@@ -39,13 +39,58 @@ button {
 }
 
 .stroke-draw {
-  stroke-dasharray: 1;       
-  stroke-dashoffset: 1;      
-  animation: draw-line 4s linear forwards; 
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw-line 4s linear forwards;
 }
 
 @keyframes draw-line {
   to {
-    stroke-dashoffset: 0;    
+    stroke-dashoffset: 0;
   }
+}
+
+/* Marquee About Page */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* @keyframes marqueeReverse {
+  0% {
+    transform: translateX(-0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+} */
+.animate-marquee {
+  animation: marquee 230s linear infinite;
+}
+/* .animate-marquee-Rev {
+  animation: marqueeReverse 230s linear infinite;
+} */
+.hover:paused:hover {
+  animation-play-state: paused;
+}
+
+.my-masonry-grid {
+  display: flex;
+  margin-left: -16px;
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 24px;
+}
+
+.my-masonry-grid_column > img {
+  width: 100%;
+  display: block;
+  margin-bottom: 24px;
+  border-radius: 1.5rem;
+  object-fit: cover;
 }
