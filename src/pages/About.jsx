@@ -23,7 +23,7 @@ export const About = () => {
     "Inside Tribe is not your ordinary cultural exhibition. We focus on one simple thing: creating a fun digital experience that encourages the discovery of Indonesia's hidden traditions. As a result of this focus, we have developed unique expertise in what we believe is essential to creating a fun experience to see the cultures and tribes of Indonesia.";
 
   return (
-    <div className="bg-white text-black my-[48px]">
+    <div className="bg-white text-black">
       <Navbar />
       <SectionAbout headingText={headingText} paragraphText={paragraphText} />
       <MarqueeAbout />
