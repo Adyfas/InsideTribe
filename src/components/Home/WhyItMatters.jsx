@@ -5,17 +5,18 @@ import TextSplit from "../TextSplit";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const WhyItMatters = () => {
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
   }, []);
   return (
-    <section className="no-scroll relative w-full min-h-screen flex flex-col justify-center items-center bg-white overflow-hidden">
+    <section className="no-scroll relative w-full min-h-screen flex flex-col justify-center items-center bg-white">
       <div className="flex flex-col w-full max-w-6xl px-6 py-16 max-md:py-0">
-        <div className="flex-1 flex items-start">
+        <div className="flex-1 flex items-start my-10">
           <h1
-            className="text-[2.5rem] md:text-[6rem] font-light leading-[1.05] text-black tracking-tight md:text-left text-left my-[8px]"
+            className="text-[2.5rem] md:text-[6rem] font-light leading-[1.05] text-black tracking-tight md:text-left text-left"
             style={{ fontFamily: "Inter, Arial, sans-serif" }}
           >
             <TextSplit text={"Tribes"} duration={0.6} delay={1} />
@@ -23,7 +24,7 @@ const WhyItMatters = () => {
         </div>
         <div className="justify-start items-start max-md:flex-col overflow-hidden no-scroll">
           <div className="justify-between items-center flex gap-10 max-md:flex-col">
-            <div className="items-start">
+            <div className="items-start md:w-1/2 w-full">
               <p
                 data-aos="fade-up"
                 className="text-lg md:text-xl text-black mb-8 max-w-lg max-md:mt-[16px] lg:ml-2 ml-0.5"
@@ -32,12 +33,13 @@ const WhyItMatters = () => {
                 the media, here we will show how unique and diverse the culture
                 and tribes in Indonesia are!
               </p>
-              <button
+              <Link
+              to={"/tribes"}
                 data-aos="fade-up"
                 className="bg-black text-white px-8 py-3 rounded-2xl text-base font-normal shadow-md hover:bg-neutral-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-black/30"
               >
                 See More
-              </button>
+              </Link>
             </div>
           </div>
           <div className="place-content-center grid lg:grid-cols-3 gap-10 md:grid-cols-2 sm:grid-cols-1 transition-all duration-500 mt-16 w-full max-w-7xl">

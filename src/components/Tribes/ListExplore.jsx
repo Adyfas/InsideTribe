@@ -29,6 +29,17 @@ export default function ListExplore() {
               className="text-xl md:text-2xl font-semibold mb-1 group-hover:underline"
             >
               {item.description}
+              {/* <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="m14 18l-1.4-1.45L16.15 13H4v-2h12.15L12.6 7.45L14 6l6 6z"
+                ></path>
+              </svg> */}
             </Link>
             <p className="text-sm text-gray-500">{item.location}</p>
           </div>
@@ -36,7 +47,7 @@ export default function ListExplore() {
             <img
               src={item.img}
               alt={item.location}
-              className="w-full h-40 md:h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-300"
+              className="w-full h-64 md:h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-300"
             />
           </figure>
         </article>
@@ -46,7 +57,7 @@ export default function ListExplore() {
           to={"/explore"}
           className="text-center text-5xl text-black hover:underline flex items-center gap-3 group"
         >
-          Explore {" "}
+          Explore{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={64}

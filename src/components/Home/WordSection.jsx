@@ -2,14 +2,15 @@ import React from "react";
 import Stack from "../Stack";
 import BounceCards from "../BounceCards";
 import {
-  images2,
+  // images2,
   images,
-  transformStyles,
+  // transformStyles,
 } from "../items/ImageItemsAboutSection";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import TextSplit from "../TextSplit";
+import { Link } from "react-router-dom";
 
 const WordSection = () => {
   useEffect(() => {
@@ -43,16 +44,17 @@ const WordSection = () => {
                 tradition, there are stories, values, and wisdom that deserve to
                 be known by the public.
               </p>
-              <button
+              <Link
+                to={"/explore"}
                 data-aos="fade-up"
                 className="bg-black text-white px-8 py-3 rounded-2xl text-base font-normal shadow-md hover:bg-neutral-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-black/30 mb-8"
               >
                 Explore More
-              </button>
+              </Link>
             </div>
             <div className="hidden md:flex w-1/2 justify-center items-center overflow-y-hidden">
               <Stack
-                aos={'fade-up'}
+                aos={"fade-up"}
                 randomRotation={false}
                 sensitivity={180}
                 sendToBackOnClick={false}
@@ -60,8 +62,11 @@ const WordSection = () => {
                 cardsData={images}
               />
             </div>
-            <div className="md:hidden flex justify-center mt-8 w-full" data-aos="fade-up">
-              <BounceCards
+            <div
+              className="md:hidden flex justify-center mt-8 w-full"
+              data-aos="fade-up"
+            >
+              {/* <BounceCards
                 className="custom-bounceCards"
                 images={images2}
                 containerWidth={300}
@@ -71,7 +76,7 @@ const WordSection = () => {
                 easeType="elastic.out(1, 0.5)"
                 transformStyles={transformStyles}
                 enableHover={false}
-              />
+              /> */}
             </div>
           </div>
         </div>

@@ -12,7 +12,7 @@ const Explore = () => {
       <Navbar />
       <SeectionExplore />
 
-      <div className=" w-full flex items-start justify-start px-6 py-20">
+      {/* <div className=" w-full flex items-start justify-start px-6 py-20">
         <div className="max-w-3xl mx-auto">
           <ScrollReveal
             baseOpacity={0.5}
@@ -25,9 +25,9 @@ const Explore = () => {
             Explore Now!
           </ScrollReveal>
         </div>
-      </div>
+      </div> */}
 
-      <div className="h-[30vh]"></div>
+      {/* <div className="h-[30vh]"></div> */}
       <ExploreNews />
       <Footer />
     </div>

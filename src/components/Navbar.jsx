@@ -31,6 +31,7 @@ export const Navbar = () => {
     if (!detector) return;
 
     const checkBackgroundColor = () => {
+      if (!navbarRef.current) return;
       const elementsBelow = document.elementsFromPoint(
         window.innerWidth / 2,
         navbarRef.current.getBoundingClientRect().bottom + 5
@@ -105,7 +106,7 @@ export const Navbar = () => {
     <>
       <nav
         ref={navbarRef}
-        className={`fixed w-full top-0 flex justify-between items-center z-50 bg-transparent p-6 transition-all duration-500`}
+        className={`fixed w-full top-0 flex justify-between items-center z-40 bg-transparent p-6 transition-all duration-500`}
       >
         <LogoNavbar isOnDark={isOnDark} />
         <ItemsNavbar

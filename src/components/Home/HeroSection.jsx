@@ -64,7 +64,7 @@ const HeroSection = ({ Video }) => {
           <video
             ref={wrapper}
             className="relative top-[24px] left-0 w-[97%] h-[85%] object-cover -z-10 rounded-4xl my-5 opacity-0 brightness-100"
-            src={Video}
+            src={'https://res.cloudinary.com/dsvtvkltm/video/upload/v1751012987/hl2feog2khgpmzi7mht8.mov'}
             autoPlay
             loop
             muted

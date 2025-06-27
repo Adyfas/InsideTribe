@@ -64,7 +64,7 @@ const Card = ({ id, img, desc, location, onRead = () => {}, index = 0 }) => {
           </span>
         </div>
       </div>
-      <div className="absolute bottom-6 left-4 right-4 z-10 transform translate-y-100 group-hover:translate-y-0 transition-all duration-700">
+      <div className="absolute bottom-6 left-4 right-4 z-10 transform translate-y-100 group-hover:translate-y-0 max-md:translate-y-0 transition-all duration-700">
         <div className="bg-white/10 backdrop-blur-md rounded-xl p-4 shadow-lg">
           <h3 className="text-white text-xl font-normal leading-snug text-start mb-3">
             {desc}
@@ -72,7 +72,7 @@ const Card = ({ id, img, desc, location, onRead = () => {}, index = 0 }) => {
           <div className="border-t border-white/20 mb-2" />
           <button
             onClick={() => onRead()}
-            className="relative flex items-center gap-2 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-all duration-500 group px-4 py-2 rounded-lg overflow-hidden focus:outline-none"
+            className="relative flex items-center gap-2 text-white text-sm font-medium opacity-0 group-hover:opacity-100 max-md:opacity-100 transition-all duration-500 group px-4 py-2 rounded-lg overflow-hidden focus:outline-none"
           >
             <span className="transition-transform duration-700 group-hover:-translate-x-2 relative ">
               Read

@@ -17,13 +17,17 @@ export const Tribes = () => {
     });
   }, []);
   return (
-    <div className="bg-white text-black my-[48px]">
+    <>
       <Navbar />
-      <SectionTribes />
-      <TwoTribe />
-      <MarqueeAbout />
-      <ListExplore />
-      <Footer />
-    </div>
+      <div className="w-full max-w-7xl mx-auto">
+        <SectionTribes />
+        <TwoTribe />
+        <MarqueeAbout />
+        <ListExplore />
+        <Footer />
+      </div>
+    </>
+    // <main className="px-6 py-24 sm:px-12 lg:px-24">
+    // </main>
   );
 };
