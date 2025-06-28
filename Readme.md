@@ -222,6 +222,7 @@ Data budaya disimpan dalam `src/data/FullNews.js` dengan struktur:
 5. **Orang Rimba/Suku Anak Dalam** - Jambi, Indonesia
 6. **Suku Sakai** - Riau, Indonesia
 7. **Suku Toraja** - Sulawesi Selatan, Indonesia
+
 Dan banyak Suku lainnya....
 
 ## 🌐 Deployment
