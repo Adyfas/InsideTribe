@@ -35,7 +35,7 @@ export const ParallaxImg = [
     description:
       "The Anak Dalam people are an indigenous group living in the forests of Sumatra, Indonesia. They are also known as the Kubu people.",
     location: "Sumatra, Indonesia",
-    link: "/Anak-Dalam",
+    link: "/Anak-dalam",
   },
   {
     id: 6,

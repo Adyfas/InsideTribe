@@ -43,7 +43,7 @@ const TwoTribe = () => {
           </FadeUp>
           <FadeUp delay={200}>
             <Link
-              to={"/explore/TorajaTribe"}
+              to={"/explore/Toraja"}
               className="bg-[#050307] hover:scale-105 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-500"
             >
               Explore Now
@@ -71,7 +71,7 @@ const TwoTribe = () => {
           </FadeUp>
           <FadeUp delay={200}>
             <Link
-              to={"/explore/BaduyTribe"}
+              to={"/explore/Baduy"}
               className="bg-[#050307] hover:scale-105 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-500"
             >
               Explore Now
@@ -115,7 +115,7 @@ const TwoTribe = () => {
           </FadeUp>
           <FadeUp delay={200}>
             <Link
-              to={"/explore/BaduyTribe"}
+              to={"/explore/Baduy"}
               className="bg-[#050307] hover:scale-105 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-500"
             >
               Explore Now

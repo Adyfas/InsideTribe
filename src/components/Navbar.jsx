@@ -118,7 +118,7 @@ export const Navbar = () => {
           itemsButton={NavbarButtonItems}
           isOnDark={isOnDark}
         />
-        <ButtonMenuMobile setOverlayMenu={setOverlayMenu} />
+        <ButtonMenuMobile setOverlayMenu={setOverlayMenu} isOnDark={isOnDark}/>
         <OverlayMenuNavbarMobile
           items={NavbarItems}
           itemsButton={NavbarButtonItems}
