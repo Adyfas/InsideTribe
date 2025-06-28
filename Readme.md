@@ -116,7 +116,7 @@ inside-tribe/
 
 1. **Clone repository**
    ```bash
-   git clone [repository-url]
+   git clone [https://github.com/Adyfas/InsideTribe.git]
    cd inside-tribe
    ```
 
@@ -222,6 +222,7 @@ Data budaya disimpan dalam `src/data/FullNews.js` dengan struktur:
 5. **Orang Rimba/Suku Anak Dalam** - Jambi, Indonesia
 6. **Suku Sakai** - Riau, Indonesia
 7. **Suku Toraja** - Sulawesi Selatan, Indonesia
+Dan banyak Suku lainnya....
 
 ## 🌐 Deployment
 
@@ -264,9 +265,9 @@ Proyek ini dibuat untuk Kompetisi Desain Website Difest 2024. Semua hak cipta di
 ## 📞 Kontak
 
 Untuk pertanyaan atau kolaborasi, silakan hubungi:
-- Email: [email-address]
-- Website: [website-url]
-- GitHub: [github-profile]
+- Email: [adyfasofice@gmail.com]
+- Website: [https://inside-tribe.vercel.app]
+- GitHub: [https://github.com/Adyfas]
 
 ---
 
