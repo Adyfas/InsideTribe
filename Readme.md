@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/InsideTribe/Logo1.png" alt="Inside Tribe Logo" width="200"/>
+  <img src="./public/InsideTribe/Logo1.png" alt="Inside Tribe Logo" width="200"/>
 </p>
 
 # 🌿 Inside Tribe
