@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="Logo1.png" alt="Inside Tribe Logo" width="200"/>
+</p>
+
 # 🌿 Inside Tribe
 
 **Inside Tribe** adalah website eksplorasi yang menampilkan budaya-budaya tertutup di Indonesia. Proyek ini diikutsertakan dalam Kompetisi Desain Website dari Difest (https://difest.himatikom-polsub.id) dengan tema budaya, fokus pada budaya-budaya yang jarang terekspos atau sulit diakses oleh publik.
