@@ -26,6 +26,7 @@ Inside Tribe adalah platform digital yang bertujuan untuk memperkenalkan dan mel
 - **Orang Rimba/Suku Anak Dalam** - Jambi
 - **Suku Sakai** - Riau
 - **Suku Toraja** - Sulawesi Selatan
+- **Dan Banyak Suku Lainnya**
 
 ## ✨ Fitur Utama
 
