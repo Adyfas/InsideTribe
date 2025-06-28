@@ -44,7 +44,7 @@ const TwoTribe = () => {
           <FadeUp delay={200}>
             <Link
               to={"/explore/Toraja"}
-              className="bg-[#050307] hover:scale-105 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-500"
+              className="bg-[#050307] hover:scale-105 text-white font-bold py-2 px-4 rounded-lg shadow-md transition-all duration-500 my-5"
             >
               Explore Now
             </Link>
@@ -93,7 +93,7 @@ const TwoTribe = () => {
             <img
               src={Baduy}
               alt="Baduy Tribe Source: https://id.pinterest.com/pin/38139928090222114/"
-              className="rounded-2xl h-2xl w-5xl hover:scale-105 transition-all duration-700"
+              className="rounded-2xl h-2xl w-5xl hover:scale-105 transition-all duration-700 my-10"
             />
           </GalleryPopupDetails>
         </div>

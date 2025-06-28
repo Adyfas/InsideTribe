@@ -2,13 +2,13 @@ import React from "react";
 import Masonry from "react-masonry-css";
 import { ParallaxImg } from "../items/AboutImage";
 import { Link } from "react-router-dom";
+import GalleryPopupDetails from "../GalleryPopupDetails";
 
 export const GridImage = () => {
   const breakpointColumnsObj = {
-    default: 3,
-    1100: 3,
-    700: 2,
-    // 500: 1,
+    default: 2,
+    1100: 2,
+    700: 1,
   };
 
   return (
@@ -19,16 +19,18 @@ export const GridImage = () => {
         columnClassName="my-masonry-grid_column"
       >
         {ParallaxImg.map((item, index) => (
-          <img
-            data-aos="zoom-in"
-            data-aos-delay={100 * index}
-            src={item.img}
-            alt={item.description || ""}
-            key={index}
-            className="w-full mb-6 rounded-3xl shadow-xl border-2 border-white"
-            style={{ background: "#eee" }}
-            draggable={false}
-          />
+          <GalleryPopupDetails img={item.img}>
+            <img
+              data-aos="zoom-in"
+              data-aos-delay={10 * index}
+              src={item.img}
+              alt={item.description || ""}
+              key={index}
+              className="w-full mb-6 rounded-3xl shadow-xl border-2 border-white"
+              style={{ background: "#eee" }}
+              draggable={false}
+            />
+          </GalleryPopupDetails>
         ))}
       </Masonry>
       <div className="flex justify-center items-center my-6">

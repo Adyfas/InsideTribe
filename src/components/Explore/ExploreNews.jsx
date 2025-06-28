@@ -128,7 +128,7 @@ const ExploreNews = () => {
               <img
                 src={item.image}
                 alt={item.location}
-                className="w-full h-40 md:h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-64 md:h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-300"
               />
             </figure>
           </article>

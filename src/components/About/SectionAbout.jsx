@@ -1,6 +1,7 @@
 import React from "react";
 import { img1 } from "../items/AboutImage";
 import Paragraph from "../Paragraph";
+import GalleryPopupDetails from "../GalleryPopupDetails";
 
 const SectionAbout = ({ headingText, paragraphText }) => {
   return (
@@ -34,13 +35,15 @@ const SectionAbout = ({ headingText, paragraphText }) => {
 
               return (
                 <div key={index} className={gridClasses}>
-                  <img
-                    data-aos="fade-up"
-                    data-aos-delay={100 * index}
-                    src={item}
-                    alt={`Collage image ${index + 1}`}
-                    className="w-full h-full object-cover rounded-3xl shadow-lg"
-                  />
+                  {/* <GalleryPopupDetails img={item}> */}
+                    <img
+                      data-aos="fade-up"
+                      data-aos-delay={100 * index}
+                      src={item}
+                      alt={`Collage image ${index + 1}`}
+                      className="w-full h-full object-cover rounded-3xl shadow-lg"
+                    />
+                  {/* </GalleryPopupDetails> */}
                 </div>
               );
             })}

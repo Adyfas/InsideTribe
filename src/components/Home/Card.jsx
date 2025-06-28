@@ -1,8 +1,9 @@
 import React, { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { Link } from "react-router-dom";
 
-const Card = ({ id, img, desc, location, onRead = () => {}, index = 0 }) => {
+const Card = ({ id, img, desc, location, index = 0, link }) => {
   const cardRef = useRef();
 
   useLayoutEffect(() => {
@@ -35,12 +36,12 @@ const Card = ({ id, img, desc, location, onRead = () => {}, index = 0 }) => {
     <div
       ref={cardRef}
       key={id}
-      className="no-scroll relative w-[340px] h-[400px] rounded-3xl overflow-hidden shadow-lg bg-black/80 max-md:w-[360px] max-md:h-[400px] group cursor-pointer"
+      className="no-scroll relative w-[340px] h-[400px] rounded-3xl overflow-hidden shadow-lg bg-black/80 max-md:w-[320px] max-md:h-[400px] group cursor-pointer"
     >
       <img
         src={img}
         alt={desc}
-        className=" inset-0 w-full h-full object-cover group-hover:brightness-75"
+        className=" inset-0 w-full h-full object-cover"
       />
       {/* <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-all duration-700" /> */}
       <div className="absolute top-4 left-4 right-4 flex justify-between items-start z-10">
@@ -70,8 +71,8 @@ const Card = ({ id, img, desc, location, onRead = () => {}, index = 0 }) => {
             {desc}
           </h3>
           <div className="border-t border-white/20 mb-2" />
-          <button
-            onClick={() => onRead()}
+          <Link
+          to={`/explore${link}`}
             className="relative flex items-center gap-2 text-white text-sm font-medium opacity-0 group-hover:opacity-100 max-md:opacity-100 transition-all duration-500 group px-4 py-2 rounded-lg overflow-hidden focus:outline-none"
           >
             <span className="transition-transform duration-700 group-hover:-translate-x-2 relative ">
@@ -80,7 +81,7 @@ const Card = ({ id, img, desc, location, onRead = () => {}, index = 0 }) => {
             <span aria-hidden className="transition-none">
               →
             </span>
-          </button>
+          </Link>
         </div>
       </div>
     </div>

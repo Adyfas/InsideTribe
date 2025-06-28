@@ -34,7 +34,7 @@ const WhyItMatters = () => {
                 and tribes in Indonesia are!
               </p>
               <Link
-              to={"/tribes"}
+                to={"/tribes"}
                 data-aos="fade-up"
                 className="bg-black text-white px-8 py-3 rounded-2xl text-base font-normal shadow-md hover:bg-neutral-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-black/30"
               >
@@ -45,12 +45,12 @@ const WhyItMatters = () => {
           <div className="place-content-center grid lg:grid-cols-3 gap-10 md:grid-cols-2 sm:grid-cols-1 transition-all duration-500 mt-16 w-full max-w-7xl">
             {image3.map((item, index) => (
               <Card
+                link={item.link}
                 desc={item.desc}
                 id={item.id}
                 img={item.img}
                 location={item.location}
                 key={index}
-                onRead={() => alert("Read clicked!")}
               />
             ))}
           </div>

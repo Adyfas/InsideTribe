@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 import { useEffect, useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
+import { Link } from "react-router-dom";
 
 const provinceStyle = {
   fillColor: "#679926",
@@ -23,13 +24,12 @@ export default function MapSection() {
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    
-    // Animasi untuk title
+
     gsap.fromTo(
       titleRef.current,
-      { 
-        y: 50, 
-        opacity: 0 
+      {
+        y: 50,
+        opacity: 0,
       },
       {
         y: 0,
@@ -46,13 +46,12 @@ export default function MapSection() {
       }
     );
 
-    // Animasi untuk map container
     gsap.fromTo(
       mapRef.current,
-      { 
-        scale: 0.8, 
+      {
+        scale: 0.8,
         opacity: 0,
-        y: 50
+        y: 50,
       },
       {
         scale: 1,
@@ -105,11 +104,8 @@ export default function MapSection() {
   let indoGeoLayer;
 
   return (
-    <section className="py-12 bg-white z-10 relative h-screen">
-      <h2 
-        ref={titleRef}
-        className="text-center text-3xl font-bold mb-6"
-      >
+    <section className="py-12 bg-white z-10 relative h-screen my-7">
+      <h2 ref={titleRef} className="text-center text-3xl font-bold mb-6">
         Mapping Indonesia's Hidden Cultures
       </h2>
 
@@ -118,7 +114,7 @@ export default function MapSection() {
           center={[-2, 117]}
           zoom={4}
           scrollWheelZoom={false}
-          className="h-[500px] w-full max-w-5xl mx-auto rounded-2xl shadow"
+          className="h-[500px] w-full max-w-[70rem] mx-auto rounded-2xl shadow my-5"
         >
           <TileLayer
             attribution="&copy; OpenStreetMap contributors"
@@ -131,13 +127,16 @@ export default function MapSection() {
             onEachFeature={onEachProv}
             ref={(layer) => (indoGeoLayer = layer)}
           />
-          
+
           {tribes.map((t) => (
             <Marker key={t.name} position={t.position} icon={tribeIcon()}>
               <Popup>
                 <b>{t.name}</b>
                 <br />
                 {t.description}
+                <br />
+                <br />
+                <Link to={t.route}>Explore: {t.name}</Link>
               </Popup>
             </Marker>
           ))}

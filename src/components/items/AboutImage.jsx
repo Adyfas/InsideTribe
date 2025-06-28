@@ -55,7 +55,7 @@ export const ParallaxImg = [
   },
   {
     id: 10,
-    img: Kajang1,
+    img: Kajang2,
     description:
       "The Kajang people are an indigenous group living in the forests of Sulawesi, Indonesia. They are known for their traditional way of life and unique culture.",
     location: "Sulawesi, Indonesia",

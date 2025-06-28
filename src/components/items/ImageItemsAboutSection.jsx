@@ -40,36 +40,42 @@ export const image3 = [
     id: 1,
     img: Baduy,
     desc: "The Baduy people are an indigenous tribe living in the mountains of Banten, Indonesia. They are known for their traditional way of life and their resistance to modernization.",
-    location: 'Banten, Indonesia'
+    location: 'Banten, Indonesia',
+    link:'/Baduy'
   },
   {
     id: 2,
     img: Dayak,
     desc: "The Dayak people are the indigenous people of Borneo, inhabiting the island of Borneo, shared by Malaysia, Indonesia, and Brunei. They are known for their skill in hunting and gathering.",
-    location: 'Borneo, Indonesia'
+    location: 'Borneo, Indonesia',
+    link:'/Dayak'
   },
   {
     id: 3,
     img: Kajang,
     desc: "The Kajang people are an ethnic group living in the southeastern part of Sulawesi, Indonesia. They are known for their traditional houses and their skill in weaving.",
-    location: 'Sulawesi, Indonesia'
+    location: 'Sulawesi, Indonesia',
+    link:"/Kajang"
   },
   {
     id: 4,
     img: Toraja,
     desc: "The Toraja people are an ethnic group living in the mountainous region of Sulawesi, Indonesia. They are known for their unique culture and elaborate funeral rituals.",
-    location: 'Sulawesi, Indonesia'
+    location: 'Sulawesi, Indonesia',
+    link:'/Toraja'
   },
   {
     id: 5,
     img: Bugis,
     desc: "The Bugis people are an ethnic group living in the southern part of Sulawesi, Indonesia. They are known for their seafaring skills and their traditional ships.",
-    location: 'Sulawesi, Indonesia'
+    location: 'Sulawesi, Indonesia',
+    link:'/Bugis'
   },
   {
     id: 6,
     img: Jambi,
     desc: "The Jambi people are an ethnic group living in the province of Jambi, Indonesia. They are known for their traditional music and dance.",
-    location: 'Jambi, Indonesia'
+    location: 'Jambi, Indonesia',
+    link:'/Anak-dalam'
   },
 ];

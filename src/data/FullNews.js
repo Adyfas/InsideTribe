@@ -102,7 +102,7 @@ export const FullNews = [
     from: "https://id.wikipedia.org/wiki/Suku_Bugis",
     image: "https://milenianews.com/wp-content/uploads/2023/09/suku-bugis.jpeg",
     content: [
-      "*Suku Bugis",
+      "*Suku Bugis*",
       "Suku Bugis merupakan kelompok etnis Austronesia terbesar di antara tiga kelompok etnolinguistik utama di Sulawesi Selatan, bersama dengan suku Makassar dan Toraja. Sulawesi Selatan terletak di bagian barat daya pulau Sulawesi, pulau terbesar ketiga di Indonesia. Pada tahun 1605, suku Bugis beralih dari kepercayaan animisme ke Islam. Meskipun mayoritas masyarakat Bugis menganut agama Islam, sebagian kecil dari mereka memeluk agama Kristen serta kepercayaan pra-Islam yang dikenal sebagai Tolotang.",
       "Suku Bugis, yang populasinya diperkirakan sekitar enam juta jiwa dan mencakup 2,5% dari total penduduk Indonesia. Secara historis, Suku Bugis dikenal sebagai pelaut dan perantau yang ulung. Selama beberapa abad terakhir, mereka telah menjelajahi dan menetap di berbagai wilayah di Nusantara, termasuk Semenanjung Malaya, Sumatra, Kalimantan, Kepulauan Nusa Tenggara, serta daerah lain yang menjadi tujuan migrasi besar-besaran sejak akhir abad ke-17. Presiden ketiga Indonesia, B. J. Habibie, serta mantan wakil presiden Indonesia, Jusuf Kalla, memiliki keturunan Bugis. Di Malaysia, Yang di-Pertuan Agong saat ini, Sultan Ibrahim, dan perdana menteri kedelapan, Muhyiddin Yassin, juga memiliki darah keturunan Bugis",
       "Sebagian besar orang Bugis berbicara dalam bahasa daerah yang khas, yaitu bahasa Bugis (Basa Ugi), selain menggunakan bahasa Indonesia. Bahasa Bugis termasuk dalam kelompok bahasa Sulawesi Selatan, yang juga mencakup bahasa Makassar, Toraja, Mandar dan Massenrempulu. Nama 'Bugis' merupakan eksonim yang berasal dari bentuk lama nama tersebut, sedangkan '(To) Ugi' adalah endonim yang digunakan oleh masyarakat Bugis sendiri",
@@ -333,8 +333,7 @@ export const FullNews = [
       "Pegunungan Tengah Papua, Kabupaten Jayawijaya, Papua Pegunungan, Indonesia",
     GPS: [-3.5, 138.5],
     from: "https://id.wikipedia.org/wiki/Suku_Dani",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRD86y2nvRE4NlTl52f0TW__xzHiYD5Sl14Q&s",
+    image: "https://static.dw.com/image/37855971_605.jpg",
     content: [
       'Suku Dani atau Hubula adalah suku yang mendiami wilayah Lembah Baliem di Pegunungan Tengah Papua, Kabupaten Jayawijaya, Papua Pegunungan, Indonesia. Sebanyak 100.000 jiwa diperkirakan menetap di Lembah Baliem, yang terdiri dari suku-suku Dani bagian hilir dan bagian hulu lembah, masing-masing sebanyak 20.000 jiwa dan 50.000 jiwa di bagian tengah lembah (total 90.000 jiwa). Daerah di bagian sebelah barat Lembah Baliem dihuni oleh sekitar 180.000 jiwa, yaitu dari suku Lani yang sering keliru disebut sebagai suku "Dani Barat". Semua penduduk Lembah Baliem dan sekitarnya sering secara umum disebut sebagai orang "Dani", sehingga kadang-kadang dianggap mencakup juga dengan suku-suku dataran tinggi lain seperti suku Lani di barat; suku Walak di utara; dan suku-suku Nduga, Mek, dan Yali di selatan dan timur.',
       "Mereka adalah salah satu suku yang paling banyak penduduknya di dataran tinggi, dan juga hidup tersebar di seluruh dataran tinggi. Suku Dani adalah salah satu kelompok etnis di Papua yang paling dikenal, karena banyaknya wisatawan yang mengunjungi daerah Lembah Baliem tempat mereka mayoritas. Ndani yang berarti 'orang timur' adalah nama yang diberikan kepada suku Lani yang tinggal di sebelah timur suku Moni, yang pada saat itu disalahpahami merujuk pada semua penduduk Lembah Baliem, dan meskipun mereka menyebut diri mereka Hubula (atau Huwulra, Hugula, Hubla), mereka selanjutnya lebih dikenal sebagai Dani sejak ekspedisi Institusi Smithsonian-Pemerintah kolonial Belanda ke Pulau Papua pada tahun 1926 di bawah etnolog Matthew Stirling, yang mengunjungi suku Moni",
@@ -394,7 +393,7 @@ kekuatan menyuburkan tanah`,
     GPS: [0.533333, 103.533333],
     from: "https://id.wikipedia.org/wiki/Suku_Laut_(Indonesia)",
     image:
-      "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/RIAU_WEB.jpg/250px-RIAU_WEB.jpg",
+      "https://awsimages.detik.net.id/community/media/visual/2021/04/20/orang-laut-atau-suku-moken-thailand-1_169.jpeg?w=650",
     content: [
       'Suku Laut atau sering juga disebut Orang Laut adalah suku bangsa yang menghuni Kepulauan Riau, Indonesia. Secara lebih luas istilah Orang Laut mencakup "berbagai suku dan kelompok yang bermukim di pulau-pulau dan muara sungai di Kepulauan Riau-Lingga, Pulau Tujuh, Kepulauan Batam, dan pesisir dan pulau-pulau di lepas pantai Sumatra Timur dan Semenanjung Malaya bagian selatan."',
       "*Bahasa Orang Laut*",

@@ -20,8 +20,8 @@ const WordSection = () => {
     });
   }, []);
   return (
-    <section className="relative w-full min-h-screen flex flex-col justify-center items-center bg-white">
-      <div className="flex flex-col w-full max-w-6xl px-6 py-16 max-md:py-0">
+    <section className="relative w-full lg:min-h-screen flex flex-col justify-center items-center bg-white">
+      <div className="flex flex-col w-full max-w-6xl px-6 max-md:py-0">
         <div className="flex-1 flex items-start">
           <h1
             data-oas-delay={700}
