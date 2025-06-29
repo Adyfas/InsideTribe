@@ -28,7 +28,7 @@ const Counter = ({ target, duration = 2000 }) => {
     }
   };
 
-  return <span>{formatCount(count)}+</span>;
+  return <span lang="zxx" translate="no">{formatCount(count)}+</span>;
 };
 
 export default Counter;

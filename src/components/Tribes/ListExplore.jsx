@@ -56,6 +56,8 @@ export default function ListExplore() {
         <Link
           to={"/explore"}
           className="text-center text-5xl text-black hover:underline flex items-center gap-3 group"
+          lang="zxx"
+          translate="no"
         >
           Explore{" "}
           <svg

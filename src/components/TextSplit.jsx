@@ -45,6 +45,6 @@ export default function TextSplit({ text, duration = 0.6, className = "", delay 
   }, [isVisible, text, duration, delay]);
 
   return (
-    <span ref={textRef} className={className} />
+    <span lang="zxx" translate="no" ref={textRef} className={className} />
   );
 } 

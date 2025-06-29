@@ -38,7 +38,10 @@ export const GridImage = () => {
           to={"/tribes"}
           className="text-center text-5xl text-black hover:underline flex items-center gap-3 group"
         >
-          Go to Tribes{" "}
+          Go to{" "}
+          <span lang="zxx" translate="no">
+            Tribes
+          </span>{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={64}

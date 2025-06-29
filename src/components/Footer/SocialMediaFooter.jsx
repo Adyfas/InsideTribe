@@ -14,6 +14,7 @@ export const SocialMediaFooter = () => {
               <Link
                 className="flex items-center gap-4 my-2 text-[16px] hover:underline group hover:text-[#b5a6ff] "
                 to={item.path}
+                lang="zxx" translate="no"
               >
                 {item.icon} {item.name}
                 <svg
