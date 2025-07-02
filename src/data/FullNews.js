@@ -444,7 +444,7 @@ Berdasarkan hasil penghitungan dialektometri, persentase perbedaan ketiga dialek
     title: "Suku Samin",
     author: "www.masterplandesa.com",
     location: "Blora, Jawa Tengah, Indonesia",
-    GPS: "-6.966667, 111.416667",
+    GPS: [-6.966667, 111.416667],
     from: "https://www.masterplandesa.com/desa-adat/menyingkap-kehidupan-suku-samin-dari-pengasingan-hingga-adaptasi-dengan-zaman/",
     image:
       "https://www.masterplandesa.com/wp-content/uploads/2024/08/Masyarakat-Suku-Samin.jpg",
@@ -466,9 +466,9 @@ Berdasarkan hasil penghitungan dialektometri, persentase perbedaan ketiga dialek
     slug: "Punan",
     subtitle: "Suku Punan, Keturunan Dayak Penjaga Hutan Rimba",
     title: "Suku Punan",
-    authort: "kompas.com",
+    author: "kompas.com",
     location: "Kalimantan, Indonesia",
-    GPS: "-1.6815, 113.3824",
+    GPS: [-1.6815, 113.3824],
     from: "https://www.kompas.com/stori/read/2021/10/14/080000779/suku-punan-keturunan-dayak-penjaga-hutan-rimba",
     image:
       "https://asset.kompas.com/crops/TQdq7bO6NW1JQV35raFiVXNFL70=/0x51:615x461/1200x800/data/photo/2021/10/12/6165bb9cceba8.jpg",

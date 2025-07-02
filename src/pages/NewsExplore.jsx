@@ -7,9 +7,9 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 export default function NewsExplore() {
   const { title } = useParams();
-  console.log("Route nya ", title);
+  // console.log("Route nya ", title);
   const article = FullNews.find((item) => item.slug === title);
-  console.log(article);
+  // console.log(article);
 
   if (!article) {
     return (

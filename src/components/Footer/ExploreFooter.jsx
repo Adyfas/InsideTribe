@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FooterLinks } from "../items/FooterItems";
 
 const ExploreFooter = () => {
+  const location = useLocation();
   return (
     <div className="space-y-4">
       <h2 className="text-2xl tracking-tight">Explore More</h2>
@@ -11,7 +12,11 @@ const ExploreFooter = () => {
           <li key={index}>
             <Link
               to={item.path}
-              className="text-sm text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group text-[16px]"
+              className={`text-sm text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-2 group text-[16px] ${
+                item.path === location.pathname
+                  ? "text-white"
+                  : "text-gray-400"
+              }`}
             >
               {item.name}
               <svg

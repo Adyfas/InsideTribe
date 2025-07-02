@@ -19,7 +19,7 @@ export const GridImage = () => {
         columnClassName="my-masonry-grid_column"
       >
         {ParallaxImg.map((item, index) => (
-          <GalleryPopupDetails img={item.img}>
+          <GalleryPopupDetails img={item.img} key={index} >
             <img
               data-aos="zoom-in"
               data-aos-delay={10 * index}

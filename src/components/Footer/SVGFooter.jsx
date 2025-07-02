@@ -11,7 +11,7 @@ export const SVGFooter = () => {
           className="w-full h-auto"
           fill="none"
           stroke="#F7ECDE"
-          stroke-opacity="0.1"
+          strokeOpacity="0.1"
           strokeWidth="21"
           strokeLinecap="square"
           strokeLinejoin="miter"

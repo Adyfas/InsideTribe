@@ -5,7 +5,7 @@ const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    console.log("Scroll triggered to top:", pathname);
+    // console.log("Scroll triggered to top:", pathname);
 
     if (window.lenis) {
       window.scrollTo({ top: 0, left: 0 });
